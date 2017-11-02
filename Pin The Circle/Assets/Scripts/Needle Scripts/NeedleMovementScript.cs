@@ -10,7 +10,7 @@ public class NeedleMovementScript : MonoBehaviour {
     private bool canFireNeedle;
     private bool touchedTheCircle;
 
-    private float forceY = 70f;
+    private float forceY = 5f;
 
     private Rigidbody2D myBody;
 
@@ -37,5 +37,32 @@ public class NeedleMovementScript : MonoBehaviour {
         needleBody.SetActive(true);
         myBody.isKinematic = false;
         canFireNeedle = true;
+    }
+
+    void OnTriggerEnter2D(Collider2D target)
+    {
+        if (touchedTheCircle)
+            return;
+
+        if(target.tag == "Circle")
+        {
+            canFireNeedle = false;
+            touchedTheCircle = true;
+
+            myBody.simulated = false;
+            gameObject.transform.SetParent(target.transform);
+
+            if (ScoreManager.instance != null)
+            {
+                ScoreManager.instance.SetScore();
+            }
+
+            /*
+            if(GameManagerScript.instance != null)
+            {
+                GameManagerScript.instance.InstantiateNeedle();
+            }
+            */
+        }
     }
 }
