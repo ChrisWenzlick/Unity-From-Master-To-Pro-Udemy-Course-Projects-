@@ -10,7 +10,7 @@ public class NeedleMovementScript : MonoBehaviour {
     private bool canFireNeedle;
     private bool touchedTheCircle;
 
-    private float forceY = 5f;
+    private float forceY = 30f;
 
     private Rigidbody2D myBody;
 
