@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 17f97c48f3f135645917bc7bbf679749
+timeCreated: 1512080582
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Chocolate Covered Raindrops
+  fontNames:
+  - Chocolate Covered Raindrops
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
